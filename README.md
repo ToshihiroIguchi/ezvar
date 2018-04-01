@@ -10,7 +10,7 @@ First, access [CRAN](https://cran.r-project.org/), download R and install.
 You can install from R console.
 If shiny, zoo and vars are not installed on your PC, install shiny, zoo and vars with Internet connection.
 
-    install.packages(c("shiny", zoo", "vars"))
+    install.packages(c("shiny", "zoo", "vars"))
 
 If shiny, zoo and vars are installed, it can be started from R console with the following command.
     
