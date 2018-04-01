@@ -44,5 +44,3 @@ SOFTWARE.
 
 ### Auther
 Toshihiro Iguchi
-
-# ezvar
