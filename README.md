@@ -31,7 +31,25 @@ Enter the following command in R console.
     #Host the Shiny application from GitHub
     shiny::runGitHub("ezvar", "ToshihiroIguchi", launch.browser = FALSE, port = port, host = ip)
 
-If you are in the private network, you can also launch the Shiny application by entering the URL following `Listing on` to the browser.
+If you are in the private network, you can also launch the Shiny application by entering the URL following `Listing on` to a browser.
+
+
+### How to use
+
+Operate with the browser.
+Select csv file in `Browse...`.
+The contents of the csv file are displayed on the `Data` tab.
+
+Analyze only numeric data.
+It is not analyzed if it is recognized as an application character.
+Be careful as commas are recognized as characters.
+
+Enter the integer value of `The highest lag order`.
+For example, when predicting a numerical value every month, it can be expected to be a 12-month cycle, so you would enter a value of 12 or more.
+
+Enter the integer value of `Period`.
+Because it is difficult to predict long-term values, small numbers are preferable.
+
 
 ### License 
 

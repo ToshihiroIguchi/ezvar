@@ -4,7 +4,7 @@ shinyUI(
   fluidPage(
     sidebarLayout(
       sidebarPanel(
-        fileInput("file", "Choose CSV File",
+        fileInput("file", "Choose csv file",
                   accept = c(
                     "text/csv",
                     "text/comma-separated-values,text/plain",
