@@ -3,7 +3,7 @@ Future prediction with easy VAR model.
 
 ### Description
 Use the vector autoregressive(VAR) model to predict future values from time series data.
-In this program, the differences of time series data are taken and applied to the VAR model to predict the future value by predicting the future difference.
+In this Shiny application, the differences of time series data are taken and applied to the VAR model to predict the future value by predicting the future difference.
 
 ### Launch web application
 First, access [CRAN](https://cran.r-project.org/), download R and install.
@@ -15,7 +15,24 @@ If shiny, zoo and vars are not installed on your PC, install shiny, zoo and vars
 If shiny, zoo and vars are installed, it can be started from R console with the following command.
     
     shiny::runGitHub("ezvar", "ToshihiroIguchi")
-    
+
+### Host
+Host the Shiny application from GitHub in a private network.
+Enter the following command in R console.
+
+    #Port specification
+    port <- 1234
+
+    #Acquire private address information
+    ipconfig.dat <- system("ipconfig", intern = TRUE)
+    ipv4.dat <- ipconfig.dat[grep("IPv4", ipconfig.dat)][1]
+    ip <- gsub(".*? ([[:digit:]])", "\\1", ipv4.dat)
+
+    #Host the Shiny application from GitHub
+    shiny::runGitHub("ezvar", "ToshihiroIguchi", launch.browser = FALSE, port = port, host = ip)
+
+If you are in the private network, you can also launch the Shiny application by entering the URL following `Listing on` to the browser.
+
 ### License 
 
 ```
