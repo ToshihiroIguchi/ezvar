@@ -7,7 +7,7 @@ server <- function(input, output, session) {
     csv_file <- reactive({read.csv(input$file$datapath)})
     output$data <- renderTable({csv_file()})
     
-    result <- reactive({var.aic(csv_file())})
+    result <- reactive({var.aic(csv_file(), lag.max = input$lag.max)})
     pred <- reactive({var.pred(result(), n.ahead = input$period)})
     
     output$trend_name <- renderUI({

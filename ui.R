@@ -11,7 +11,9 @@ shinyUI(
                     ".csv")
         ),
         tags$hr(),
+        numericInput("lag.max", "The highest lag order", value = 12),
         
+        tags$hr(),
         numericInput("period", "Period", value = 3)
         
       ),
