@@ -12,7 +12,7 @@ shinyUI(
         ),
         tags$hr(),
         
-        sliderInput("period", "Period", min = 1, max = 30, value = 3)
+        numericInput("period", "Period", value = 3)
         
       ),
       mainPanel(
