@@ -2,6 +2,7 @@ library(shiny)
 
 shinyUI(
   fluidPage(
+    titlePanel("Easy vector autoregressive"),
     sidebarLayout(
       sidebarPanel(
         fileInput("file", "Choose csv file",
